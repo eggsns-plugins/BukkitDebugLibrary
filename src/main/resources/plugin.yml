@@ -1,0 +1,9 @@
+name: DebugLib
+version: 0.0.3
+main: com.eggsnham.Plugin
+api-version: 1.19
+load: STARTUP
+loadbefore: [ ChestLock, ExplosiveArrowPlugin ]
+authors: [ eggsnham07 ]
+description: Debug library for bukkit plugins
+website: https://git.eggsnham.com/content/DebugLib/latest
