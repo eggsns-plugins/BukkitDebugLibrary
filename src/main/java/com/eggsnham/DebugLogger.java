@@ -29,7 +29,7 @@ public class DebugLogger {
     {
         msg = "[" + time + " INFO]: " + msg;
         try {
-            FileOutputStream fos = new FileOutputStream(plugin.getDataFolder().getAbsolutePath() + "/debug.log", true);
+            FileOutputStream fos = new FileOutputStream(plugin.getDataFolder() + "/debug.log", true);
             fos.write(msg.getBytes());
             fos.close();
         } catch (Exception ex) {
@@ -42,7 +42,7 @@ public class DebugLogger {
         if(logToConsole) plugin.getLogger().log(Level.parse(level.toString()), msg);
         msg = "[" + time + " " + level.toString() + "]: " + msg;
         try {
-            FileOutputStream fos = new FileOutputStream(plugin.getDataFolder().getAbsolutePath() + "/debug.log", true);
+            FileOutputStream fos = new FileOutputStream(plugin.getDataFolder() + "/debug.log", true);
             fos.write(msg.getBytes());
             fos.close();
         } catch(Exception ex) {
@@ -54,22 +54,8 @@ public class DebugLogger {
     @Deprecated
     public void log(String msg, DebugLevel level)
     {
-        plugin.getLogger().log(Level.SEVERE, "Method log(String, DebugLevel) was used and is deprecated!");
-        plugin.getLogger().log(Level.SEVERE, "| Please replace it with log(DebugLevel, String)          ");
-        plugin.getLogger().log(Level.SEVERE, "|---------------------------------------------------------");
-        return;
-        
-        /*
-        if(logToConsole) plugin.getLogger().log(Level.parse(level.toString()), msg);
-        msg = "[" + time + " " + level.toString() + "]: " + msg;
-        try {
-            FileOutputStream fos = new FileOutputStream(plugin.getDataFolder().getAbsolutePath() + "/debug.log", true);
-            fos.write(msg.getBytes());
-            fos.close();
-        } catch(Exception ex) {
-            ex.printStackTrace();
-        }
-        */
-        
+        plugin.getLogger().log(Level.SEVERE, "| Method log(String, DebugLevel) was used and is deprecated!");
+        plugin.getLogger().log(Level.SEVERE, "| Please replace it with log(DebugLevel, String)            ");
+        plugin.getLogger().log(Level.SEVERE, "|-----------------------------------------------------------");
     }
 }

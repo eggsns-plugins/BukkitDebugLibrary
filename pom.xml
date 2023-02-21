@@ -5,15 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.eggsnham</groupId>
-    <artifactId>Debug</artifactId>
-    <version>0.0.4</version>
+    <artifactId>DebugLib</artifactId>
+    <version>0.0.5</version>
     <packaging>jar</packaging>
 
     <name>DebugLib</name>
 
     <description>Debug library for bukkit plugins</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <maven.compiler.source>17</maven.compiler.source>
