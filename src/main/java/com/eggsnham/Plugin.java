@@ -9,6 +9,8 @@ public final class Plugin extends JavaPlugin {
         DebugLogger logger = new DebugLogger(this);
         logger.logToConsole();
 
+        this.getCommand("checklog").setExecutor(new CheckLogCommand());
+
         logger.log(DebugLevel.INFO, this.getName() + " has started!");
     }
 
